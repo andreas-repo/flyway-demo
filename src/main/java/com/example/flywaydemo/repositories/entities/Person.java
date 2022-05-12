@@ -1,5 +1,8 @@
 package com.example.flywaydemo.repositories.entities;
 
+import org.jetbrains.annotations.NotNull;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -21,6 +24,8 @@ public class Person {
         this.id = id;
     }
 
+    @Column
+    @NotNull
     public String getFirstName() {
         return firstName;
     }
@@ -29,6 +34,8 @@ public class Person {
         this.firstName = firstName;
     }
 
+    @Column
+    @NotNull
     public String getLastName() {
         return lastName;
     }
