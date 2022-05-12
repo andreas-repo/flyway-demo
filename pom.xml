@@ -81,17 +81,19 @@
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>8.5.10</version>
                 <configuration>
-                    <url>jdbc:h2:file:./target/foobar</url>
-                    <user>sa</user>
+                    <url>jdbc:postgres:localhost:5432/demoDB</url>
+                    <user>demo</user>
+                    <password>demo</password>
                     <locations>
                         <location>classpath:db/migration</location>
                     </locations>
                 </configuration>
                 <dependencies>
+                    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
                     <dependency>
-                        <groupId>com.h2database</groupId>
-                        <artifactId>h2</artifactId>
-                        <version>1.4.191</version>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>42.3.5</version>
                     </dependency>
                 </dependencies>
             </plugin>
